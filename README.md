@@ -1,2 +1,3 @@
-# reneewallwork-website
-Official website for Renée Wallwork
+# Renée Wallwork Website
+
+Official website project for Renée Wallwork.
