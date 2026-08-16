@@ -9,6 +9,84 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .homepage-banner {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      background: #f4eee8;
+    }
+
+    .homepage-banner img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .homepage-banner .banner-link {
+      position: absolute;
+      z-index: 3;
+      display: block;
+      border-radius: 4px;
+    }
+
+    .homepage-banner .banner-link:focus-visible {
+      outline: 3px solid #2a2523;
+      outline-offset: 4px;
+    }
+
+    .homepage-banner .books-hotspot {
+      left: 47.4%;
+      top: 74.1%;
+      width: 17.8%;
+      height: 7.8%;
+    }
+
+    .homepage-banner .jewellery-hotspot {
+      left: 67.0%;
+      top: 74.1%;
+      width: 24.8%;
+      height: 7.8%;
+    }
+
+    .visually-hidden {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
+
+    @media (max-width: 760px) {
+      .homepage-banner {
+        overflow-x: auto;
+      }
+
+      .homepage-banner .banner-link {
+        min-height: 32px;
+      }
+
+      .homepage-banner-mobile-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 18px 20px 24px;
+        background: #f4eee8;
+      }
+    }
+
+    @media (min-width: 761px) {
+      .homepage-banner-mobile-actions {
+        display: none;
+      }
+    }
+  </style>
+
 </head>
 <body>
 
@@ -35,21 +113,24 @@
 </header>
 
 <main id="top">
-<section class="hero">
-  <div class="hero-copy">
-    <p class="eyebrow">AUTHOR • SINGER • DESIGNER</p>
-    <h1>Renée Wallwork</h1>
-    <p class="lead">Stories, songs and meaningful creations shaped by memory, place and human connection.</p>
-    <p class="intro">You might know me through my books, my memorial jewellery, or from behind a microphone. This is where those different parts of my creative life come together.</p>
-    <div class="buttons">
-      <a class="btn primary" href="#books">Explore My Books</a>
-      <a class="btn secondary" href="#jewellery">Discover A&amp;R Jewellery Designs</a>
-    </div>
+<section class="homepage-banner" aria-labelledby="homepage-hero-title">
+  <img src="assets/hero-banner.png" alt="Renée Wallwork, author, singer and designer" />
+
+  <div class="visually-hidden">
+    <p>Author • Singer • Designer</p>
+    <h1 id="homepage-hero-title">Renée Wallwork</h1>
+    <p>Stories, songs and meaningful creations shaped by memory, place and human connection.</p>
+    <p>You might know me through my books, my memorial jewellery, or from behind a microphone. This is where those different parts of my creative life come together.</p>
   </div>
-  <div class="hero-image">
-    <img src="assets/hero-renee.jpg" alt="Portrait of Renée Wallwork" />
-  </div>
+
+  <a class="banner-link books-hotspot" href="#books" aria-label="Explore My Books"></a>
+  <a class="banner-link jewellery-hotspot" href="#jewellery" aria-label="Discover A&amp;R Jewellery Designs"></a>
 </section>
+
+<div class="homepage-banner-mobile-actions" aria-label="Homepage links">
+  <a class="btn primary" href="#books">Explore My Books</a>
+  <a class="btn secondary" href="#jewellery">Discover A&amp;R Jewellery Designs</a>
+</div>
 
 
 
