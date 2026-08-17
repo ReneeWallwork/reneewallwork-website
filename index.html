@@ -223,7 +223,6 @@
 
     <img src="assets/memorial-pendant-black-pink-heart.jpg" alt="Black and pink heart memorial pendant worn on a model" />
 
-    <img src="assets/memorial-pendant-black-sparkle-set.jpg" alt="Black sparkle memorial pendant set worn on a model" />
 
     <img src="assets/memorial-pendant-black-teardrop.jpg" alt="Black teardrop memorial pendant worn on a model" />
 
@@ -356,5 +355,70 @@
   <div><strong>Renée Wallwork</strong><br><span>Author • Singer • Designer</span></div>
   <div>© 2026 Renée Wallwork</div>
 </footer>
+  <script>
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  const links = document.querySelectorAll('.gallery-nav a');
+
+  const categories = document.querySelectorAll('.gallery-category');
+
+  function showCategory(id) {
+
+    categories.forEach(function (category) {
+
+      category.hidden = category.id !== id;
+
+    });
+
+    links.forEach(function (link) {
+
+      link.classList.toggle(
+
+        'active',
+
+        link.getAttribute('href') === '#' + id
+
+      );
+
+    });
+
+  }
+
+  let startingCategory = 'pendants';
+
+  if (window.location.hash) {
+
+    const requested = window.location.hash.substring(1);
+
+    if (document.getElementById(requested)) {
+
+      startingCategory = requested;
+
+    }
+
+  }
+
+  showCategory(startingCategory);
+
+  links.forEach(function (link) {
+
+    link.addEventListener('click', function (event) {
+
+      event.preventDefault();
+
+      const id = link.getAttribute('href').substring(1);
+
+      showCategory(id);
+
+      history.replaceState(null, '', '#' + id);
+
+    });
+
+  });
+
+});
+
+</script>
 </body>
 </html>
