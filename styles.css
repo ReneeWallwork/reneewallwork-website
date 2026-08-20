@@ -128,7 +128,7 @@ h3{font-size:1.9rem;font-weight:600}
 .split .media-panel{min-height:520px;max-height:620px;overflow:hidden}
 .split .media-panel img{height:100%;object-fit:cover}
 .jewellery-media img{object-position:50% 58%}
-.singer-media img{object-position:center 44%}
+.singer-media img{object-position:38% 44%}
 .split .copy-panel{
   display:flex;flex-direction:column;justify-content:center;
   padding:64px clamp(28px,5vw,74px);
