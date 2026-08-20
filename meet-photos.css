@@ -1,0 +1,16 @@
+/* Meet Renée photo pair: show each complete photograph without cropping. */
+.about-photo-pair img {
+  width: 100% !important;
+  height: 320px !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  background: #f7f2eb;
+}
+
+@media (max-width: 620px) {
+  .about-photo-pair img {
+    height: auto !important;
+    max-height: 420px;
+  }
+}
