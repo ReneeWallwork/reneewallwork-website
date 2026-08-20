@@ -137,6 +137,31 @@ h3{font-size:1.9rem;font-weight:600}
 .dark .copy-panel p:not(.eyebrow){color:#e7dfda}
 .singer{background:#fbf5f3}
 .about{background:var(--ivory)}
+.about-photo-pair{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:20px;
+  max-width:780px;
+  margin:38px auto 0;
+}
+.about-photo-pair figure{margin:0;text-align:center}
+.about-photo-pair img{
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  border-radius:16px;
+  box-shadow:0 14px 30px rgba(60,45,40,.10);
+}
+.about-photo-pair figure:first-child img{object-position:center 44%}
+.about-photo-pair figcaption{
+  margin-top:12px;
+  color:#6b625e;
+  font-size:.9rem;
+  font-style:italic;
+}
+@media (max-width:620px){
+  .about-photo-pair{grid-template-columns:1fr;max-width:420px}
+}
 .latest{background:#fffdf9}
 .cards{
   display:grid;grid-template-columns:repeat(3,1fr);
