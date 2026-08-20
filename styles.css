@@ -152,7 +152,7 @@ h3{font-size:1.9rem;font-weight:600}
   border-radius:16px;
   box-shadow:0 14px 30px rgba(60,45,40,.10);
 }
-.about-photo-pair figure:first-child img{object-position:center 44%}
+.about-photo-pair figure:first-child img{object-position:center top}
 .about-photo-pair figcaption{
   margin-top:12px;
   color:#6b625e;
