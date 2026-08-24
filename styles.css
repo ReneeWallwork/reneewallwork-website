@@ -277,13 +277,31 @@ footer span{opacity:.78}
 .back-home{display:inline-block;margin-top:18px;color:#e7dfda;text-underline-offset:5px}
 @media (min-width:761px) and (max-width:1180px){
 
+  .live-hero{
+
+    min-height:560px;
+
+  }
+
+  .live-hero-copy{
+
+    padding:40px 32px;
+
+  }
+
+  .live-hero-copy h1{
+
+    font-size:clamp(3.4rem,6vw,4.6rem);
+
+  }
+
   .live-hero-media{
 
-    min-height:0;
+    min-height:560px;
 
     height:560px;
 
-    align-self:center;
+    align-self:stretch;
 
   }
 
