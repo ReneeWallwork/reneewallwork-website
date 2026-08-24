@@ -304,7 +304,11 @@ footer span{opacity:.78}
     align-self:stretch;
 
   }
+.live-hero-media img{
 
+  object-position:35% center;
+
+}
 }
 @media (max-width:760px){
   .live-hero{grid-template-columns:1fr;min-height:auto}
