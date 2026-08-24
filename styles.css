@@ -275,6 +275,19 @@ footer span{opacity:.78}
 }
 .live-booking p{max-width:680px;margin:0 auto 24px;color:#e7dfda}
 .back-home{display:inline-block;margin-top:18px;color:#e7dfda;text-underline-offset:5px}
+@media (min-width:761px) and (max-width:1180px){
+
+  .live-hero-media{
+
+    min-height:0;
+
+    height:560px;
+
+    align-self:center;
+
+  }
+
+}
 @media (max-width:760px){
   .live-hero{grid-template-columns:1fr;min-height:auto}
   .live-hero-media{min-height:430px;order:-1}
