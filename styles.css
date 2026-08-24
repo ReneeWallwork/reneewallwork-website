@@ -306,7 +306,9 @@ footer span{opacity:.78}
   }
 .live-hero-media img{
 
-  object-position:35% center;
+  object-fit:contain;
+
+object-position:center;
 
 }
 }
